@@ -8,6 +8,6 @@ Installers for macOS, Windows and Linux can be downloaded from [GitHub releases]
 
 | Platform  | Release  |
 |:--|:--|
-| macOS  | <a href='https://github.com/smallstep/smallstep-desktop/releases/latest/download/smallstep_desktop_darwin_universal.pkg'>Latest Version</a>  |
-| Linux  | <a href='https://github.com/smallstep/smallstep-desktop/releases/latest/download/smallstep_desktop_linux_amd64.AppImage'>Latest Version</a>  |
+| macOS  | <a href='https://github.com/smallstep/smallstep-desktop/releases/latest/download/smallstep-desktop_darwin_universal.pkg'>Latest Version</a>  |
+| Linux  | <a href='https://github.com/smallstep/smallstep-desktop/releases/latest/download/smallstep-desktop_linux_amd64.AppImage'>Latest Version</a>  |
 | Windows  | <a href='https://github.com/smallstep/smallstep-desktop/releases/latest/download/smallstep_desktop_windows_amd64.appx'>Latest Version</a>  |
