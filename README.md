@@ -40,7 +40,7 @@ All platforms require an internet connection for normal operation.
 
 - *TPM read/write permission* - the Smallstep app communicates to the TPM from user-space using `tpm-tss2`, and the running user must have read/write permissions to the TPM resource manager (typically `/dev/tpmrm0`)
 
-On all platforms, the Smallstep app manages a directory on the filesystem in well-known location for management of keys and certificates:
+On all platforms, the Smallstep app manages a directory on the filesystem in a well-known location for management of keys and certificates:
 
 - On macOS: `$HOME/Library/Application Support/Smallstep`
 - On Windows: `%LOCALAPPDATA%/Smallstep`
