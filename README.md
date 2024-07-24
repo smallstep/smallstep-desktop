@@ -24,6 +24,8 @@ Smallstep helps ensure that access to financial data, code repositories, PII and
 
 ## Runtime Requirements
 
+All platforms require an internet connection for normal operation.
+
 ### Windows
 
 - *Administrator privileges* - the Smallstep app requires privilege escalation to be able to communicate to the TPM
@@ -47,3 +49,14 @@ Installers for macOS, Windows and Linux can be downloaded from [GitHub releases]
 | macOS  | <a href='https://github.com/smallstep/smallstep-desktop/releases/latest/download/smallstep-desktop_darwin_universal.pkg'>Latest Version</a>  |
 | Linux  | <a href='https://github.com/smallstep/smallstep-desktop/releases/latest/download/smallstep-desktop_linux_amd64.AppImage'>Latest Version</a>  |
 | Windows  | <a href='https://github.com/smallstep/smallstep-desktop/releases/latest/download/smallstep_desktop_windows_amd64.appx'>Latest Version</a>  |
+
+## Telemetry
+
+The Smallstep app collects and reports some data from the host device as part of its normal operation. These are:
+
+- Device Identifiers from TPM-enabled platforms
+- Device/Computer Name
+- Device/Computer Hostname
+- Chipset Architecture
+- Operating System Version
+- WAN IP Address
