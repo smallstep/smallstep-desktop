@@ -68,3 +68,23 @@ The Smallstep app collects and reports some data from the host device as part of
 - Chipset Architecture
 - Operating System Version
 - WAN IP Address
+
+## Usage
+
+### PKCS#11 Server on Linux
+
+On Linux, the Smallstep app provides a PKCS#11 server that can be used for a variety of integration use cases, such as Network Manager connections or web browser certificates. The PKCS#11 server is exposed as a UNIX socket at `$XDG_RUNTIME_DIR/step-agent/step-agent-pkcs11.sock`. One usage example would be adding the PKCS#11 tokens to your browser using `modutil` and an NSS database.
+
+On Chrome (which defaults to `~/.pki/nssdb`), for example:
+
+```bash
+modutil -dbdir ~/.pki/nssdb -add step-agent -libfile <path-to-p11-kit-libs>/p11-kit-client.so
+export P11_KIT_SERVER_ADDRESS=unix:path=$XDG_RUNTIME_DIR/step-agent/step-agent-pkcs11.sock
+```
+
+After that, you should see certificates managed by Smallstep in Chrome. You'll want to add `P11_KIT_SERVER_ADDRESS` to your environment more permanents for regular usage. You can use tools like `pkcs11-tool` for troubleshooting:
+
+`pkcs11-tool --module <path-to-p11-kit-libs>/p11-kit-client.so --list-slots`
+
+Read the [p11-kit](https://p11-glue.github.io/p11-glue/p11-kit/manual/) documentation for more details.
+
