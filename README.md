@@ -56,7 +56,8 @@ Installers for macOS, Windows and Linux can be downloaded from [GitHub releases]
 | Linux (Flatpak) | <a href='https://packages.smallstep.com/stable/flatpak/Smallstep.flatpakref'>Latest Version</a>  |
 | Linux (.deb) | <a href='https://packages.smallstep.com/stable/deb/smallstep-desktop.deb'>Latest Version</a>  |
 | Linux (.rpm) | <a href='https://packages.smallstep.com/stable/deb/smallstep-desktop.rpm'>Latest Version</a>  |
-| Windows  | <a href='https://packages.smallstep.com/stable/windows/Smallstep.exe'>Latest Version</a>  |
+| Windows (AMD64)  | <a href='https://packages.smallstep.com/stable/windows/Smallstep_amd64.exe'>Latest Version</a>  |
+| Windows (ARM64)  | <a href='https://packages.smallstep.com/stable/windows/Smallstep_arm64.exe'>Latest Version</a>  |
 
 ## Telemetry
 
