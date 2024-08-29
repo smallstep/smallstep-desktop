@@ -15,7 +15,6 @@ Smallstep helps ensure that access to financial data, code repositories, PII and
 - `systemd`-based service manager
 - Trusted Platform Module (TPM 2.0)
 - p11-kit
-- tpm-tss2
 
 ### macOS
 
@@ -32,13 +31,13 @@ All platforms require an internet connection for normal operation.
 
 ### macOS
 
-- *Location permission* - to enable management of Wifi networks, the Smallstep app needs location permission
+- *Location permission* - to enable management of Wi-Fi networks, the Smallstep app needs location permission
 - *Keychain access* - the Smallstep app uses the macOS keychain to store both keys and certificates it manages
 - *Network Extension entitlement* - the Smallstep app requests the *Network Extension* entitlement so that it can manage VPN connections
 
 ### Linux
 
-- *TPM read/write permission* - the Smallstep app communicates to the TPM from user-space using `tpm-tss2`, and the running user must have read/write permissions to the TPM resource manager (typically `/dev/tpmrm0`)
+- *TPM read/write permission* - the Smallstep app communicates to the TPM from user-space, and the running user must have read/write permissions to the TPM resource manager (typically `/dev/tpmrm0`) or the TPM device (typically `/dev/tpm0`)
 
 On all platforms, the Smallstep app manages a directory on the filesystem in a well-known location for management of keys and certificates:
 
@@ -63,7 +62,7 @@ Installers for macOS, Windows and Linux can be downloaded from [GitHub releases]
 
 The Smallstep app collects and reports some data from the host device as part of its normal operation. These are:
 
-- Device Identifiers from TPM-enabled platforms
+- Hardware Identifiers from TPM-enabled platforms
 - Device/Computer Name
 - Device/Computer Hostname
 - Chipset Architecture
@@ -83,7 +82,7 @@ modutil -dbdir ~/.pki/nssdb -add step-agent -libfile <path-to-p11-kit-libs>/p11-
 export P11_KIT_SERVER_ADDRESS=unix:path=$XDG_RUNTIME_DIR/step-agent/step-agent-pkcs11.sock
 ```
 
-After that, you should see certificates managed by Smallstep in Chrome. You'll want to add `P11_KIT_SERVER_ADDRESS` to your environment more permanents for regular usage. You can use tools like `pkcs11-tool` for troubleshooting:
+After that, you should see certificates managed by Smallstep in Chrome. You'll want to add `P11_KIT_SERVER_ADDRESS` to your environment more permanently for regular usage. You can use tools like `pkcs11-tool` for troubleshooting:
 
 `pkcs11-tool --module <path-to-p11-kit-libs>/p11-kit-client.so --list-slots`
 
